@@ -2,6 +2,7 @@
 # define CONTACT_HPP
 #include <iostream>
 #include <string>
+#include <iomanip>
 
 class Contact {
 	private:
@@ -12,14 +13,14 @@ class Contact {
 		std::string phoneNumber;
 		std::string secret;
 		std::string	truncateUserInfo(std::string) const;
-		std::string	getprompt(std::string);
+		std::string	getprompt(std::string str) const;
 		void		formatUserInfo() const;
 
 	public:
 		Contact();
 		~Contact();
 
-		void	newContact();
+		void	newContact(int nbr);
 		void	displayInfo() const;
 
 };
