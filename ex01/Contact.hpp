@@ -14,12 +14,12 @@ class Contact {
 		std::string secret;
 		std::string	truncateUserInfo(std::string) const;
 		std::string	getprompt(std::string str) const;
-		void		formatUserInfo() const;
 
 	public:
 		Contact();
 		~Contact();
 
+		void		formatUserInfo() const;
 		void	newContact(int nbr);
 		void	displayInfo() const;
 

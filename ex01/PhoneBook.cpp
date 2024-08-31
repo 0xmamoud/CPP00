@@ -1,10 +1,10 @@
 #include "PhoneBook.hpp"
 
+int PhoneBook::index = 0;
+
 PhoneBook::PhoneBook(){};
 
 PhoneBook::~PhoneBook(){};
-
-int PhoneBook::index = 0;
 
 void	PhoneBook::addContact() {
 	if (this->index >= 8) {
@@ -23,7 +23,7 @@ void PhoneBook::searchContact() const {
 	}
 	for (int i = 0; i < index; i++)
 	{
-		this->contact[i].displayInfo();
+		this->contact[i].formatUserInfo();
 		std::cout << "------------------" << std::endl;
 	}
 	
